@@ -79,14 +79,13 @@
         </form>
     </div>
     <div class="review__popup">
-        <div class="review__content">
+        <div class="review__content pr">
             <div class="close__popup"></div>
             <div class="leave__form">
                 <h1>Leave a review</h1>
                 <form action="" class="df">
                     <form action="" class="df">
                         <div class="leave__form__left pr">
-
                             <div class="form__row df pr">
                                 <label>Telegram</label>
                                 <input type="text" placeholder="@Nick">
@@ -100,7 +99,7 @@
                                     <option value="1">1</option>
                                     <option value="1">1</option>
                                 </select>
-                                <span class="empty__input"></span>
+                                <span class="arrow"></span>
                             </div>
                             <div class="form__row df pr">
                                 <label>Промо</label>
@@ -110,12 +109,10 @@
                                     <option value="1">1</option>
                                     <option value="1">1</option>
                                 </select>
-                                <span class="empty__input"></span>
+                                <span class="arrow"></span>
                             </div>
 
-                            <div class="form__row df j-sp-btw">
-                                <button type="submit" class="login__btn">Send</button>
-                            </div>
+
                         </div>
                         <div class="leave__form__right pr">
                             <div class="form__row df pr">
@@ -126,7 +123,7 @@
                                     <option value="1">1</option>
                                     <option value="1">1</option>
                                 </select>
-                                <span class="empty__input"></span>
+                                <span class="arrow"></span>
                             </div>
                             <div class="form__row df pr">
                                 <label>Окупаемость</label>
@@ -136,13 +133,41 @@
                                     <option value="1">1</option>
                                     <option value="1">1</option>
                                 </select>
-                                <span class="empty__input"></span>
+                                <span class="arrow"></span>
+                            </div>
+                            <div class="form__row review__stars df pr">
+                                <label>Stars</label>
+                                <div class="rate">
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text"></label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text"></label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="text"></label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="text"></label>
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="text"></label>
+                                </div>
                             </div>
                         </div>
                         <div class="leave__form__full">
                             <div class="form__row form__row--pass df j-sp-btw pr">
                                 <label class="pass__label">Написать отзыв</label>
                                 <textarea placeholder="@Nick"></textarea>
+                            </div>
+                            <div class="form__row form__upload df j-sp-btw">
+                                <div class="upload__block df">
+                                    <div class="upload__form df">
+                                        <label >Upload photo</label>
+                                        <input type="file" >
+                                        <a href="">Uploads</a>
+                                    </div>
+                                    <div class="upload__result">
+                                        <img src="images/user-large.png">
+                                    </div>
+                                </div>
+                                <button type="submit" class="login__btn review__btn">Leave a review</button>
                             </div>
 
                         </div>

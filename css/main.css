@@ -962,7 +962,7 @@ footer .menu__link, footer .menu__link--active{
     font-size: 14px;
     margin-top: 44px;
 }
-.create__form .form__upload{
+ .form__upload{
     flex-direction: row;
     margin-top: 36px;
     align-items: center;
@@ -973,13 +973,13 @@ footer .menu__link, footer .menu__link--active{
     flex-direction: column;
     gap: 5px;
 }
-.create__form .upload__form input{
+.upload__form input{
     border: none;
     width: auto;
     background: none;
     display: none;
 }
-.create__form .upload__form a{
+.upload__form a{
     text-decoration: none;
     color: #6666F1;
 }
@@ -1017,6 +1017,19 @@ footer .menu__link, footer .menu__link--active{
     border: 1px solid #828282;
     margin-bottom: 22px;
     width: 100%;
+    box-sizing: border-box;
+
+}
+.leave__form select{
+    background: rgba(242, 242,242, 0.4);
+    color: #272727;
+    border-radius: 8px;
+    border: 1px solid #828282;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 44px;
+    padding: 12px;
+    box-sizing: border-box;
 }
 .leave__form form{
     justify-content: space-between;
@@ -1030,6 +1043,271 @@ footer .menu__link, footer .menu__link--active{
 }
 .leave__form .form__row label{
     color: #272727;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     margin-top: 0;
+}
+
+.leave__form  .form__row{
+    margin-top: 0;
+}
+.leave__form textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #828282;
+    color: #272727;
+    resize: none;
+    border-radius: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    background: rgba(242, 242,242, 0.4);
+
+}
+.rate {
+   display: flex;
+    height: 46px;
+    padding: 0 10px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+
+.rate:not(:checked) > label {
+   display: flex;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+.rate label:before{
+    content: '';
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    display: flex;
+
+}
+.rate:not(:checked) > label:before {
+    background: url('../images/icons/star-border.svg');
+    background-size: 100%;
+}
+.rate > input:checked ~ label:before {
+
+    background: url('../images/icons/star-full.svg');
+    background-size: 100%;
+
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+
+    background: url('../images/icons/star-full.svg');
+    background-size: 100%;
+
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+
+    background: url('../images/icons/star-full.svg');
+    background-size: 100%;
+
+}
+
+.upload__block{
+    gap: 47px;
+}
+.review__btn{
+    width: 171px;
+    height: 50px;
+}
+
+.leave__form .form__upload{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.leave__form .upload__result{
+    width: 80px;
+}
+.close__popup{
+    width: 20px;
+    height: 20px;
+    background: url('../images/icons/close.svg');
+    background-size: 100%;
+    position: absolute;
+    right: 35px;
+    top: 34px;
+    cursor: pointer
+}
+
+.messages{
+    margin-top: 55px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border: 1px solid #828282;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 633px;
+    overflow: hidden;
+
+}
+.messages__left{
+    width: 50%;
+    border-right: 1px solid #828282;
+    box-sizing: border-box;
+    overflow: auto;
+
+}
+.messages__left h2{
+    font-size: 24px;
+    color: #08081D;
+    padding-left: 50px;
+    padding-top: 42px;
+    margin-bottom: 22px;
+    position: relative;
+    width: fit-content;
+}
+.messages .count{
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    background: #9D9DFF;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    bottom: 10px;
+    right: -40px;
+}
+.user__item{
+    padding: 19px 51px 0 49px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.user__item.selected{
+    background: #F2F2F2;
+    border-bottom: 0;
+}
+.user__item.selected .user__info{
+    border-bottom: 0;
+}
+.user__info{
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    width: 100%;
+    border-bottom: 1px solid #D2D2D2;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.user__name h5{
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-size: 16px;
+    color: #08081D;
+}
+.user__name p{
+    color: #272727;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.message__count{
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    background: #9D9DFF;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    top: 15px;
+    right: 15px;
+}
+.messages__right{
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.message__list{
+    padding: 18px 50px;
+}
+.message__date{
+    text-align: center;
+    color: #747474;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.sender__text{
+    max-width: 342px;
+    background: #F2F2F2;
+    border-radius: 7px;
+    padding: 14px 40px 10px 15px;
+    box-sizing: border-box;
+}
+.sender__img{
+    width: 30px;
+    height: 30px;
+}
+
+.sender__text h4{
+    color: #272727;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.message__sender{
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.message__sender p{
+    color: #272727;
+    font-size: 14px;
+}
+.message__reciver{
+    gap: 10px;
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+
+}
+.message__reciver h4{
+    color: #272727;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+.message__reciver p{
+    color: #272727;
+    font-size: 14px;
+}
+
+.message__reciver .sender__text{
+    width: 291px;
+}
+.message__input{
+    padding: 16px;
+    border-top: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    display: flex;
+    gap: 14px;
+}
+.message__input input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 14px;
 }
