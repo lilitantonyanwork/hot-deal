@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>model</title>
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+  <nav class="header__menu df j-sp-btw a-center">
+    <div class="header-left df a-center">
+    <div class="logo">
+      <a href="#">
+        <img src="images/logo.svg">
+      </a>
+
+    </div> 
+    <ul class="menu df">
+      <li class="menu__item"><a class="menu__link menu__link--active" href="#">HOTdeal</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Models</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Categories</a></li>
+    </ul>
+    </div>
+    <div class="header-right df">
+      <div class="search__form">
+        <input type="text" class="search__input" placeholder="Search by @nickname">
+        <span class="search__icon"></span>
+      </div>
+      <div class="top__actions df a-center">
+        <div class="top__wish pr">
+          <img  src="images/icons/Heart.svg">
+          <span class="top__count pa">5</span>
+        </div>
+        <div class="top__msg pr">
+          <img  src="images/icons/msg.svg">
+
+          <span class="top__count pa">5</span>
+        </div>
+        <div class="top__wallet pr">
+          <img  src="images/icons/wallet.svg">
+
+          <span class="top__count pa">300 $</span>
+        </div>
+      </div>
+      <div class="lang__block df a-center">
+        <div class="lang__selected">RU</div>
+        <ul class="lang__list">
+
+        </ul>
+      </div>
+      <div class="user df a-center">
+        <div class="user__img">
+          <img src="images/user.png">
+        </div>
+      </div>
+
+    </div>
+  </nav>
+</header>
+<section class="model__section df j-sp-btw">
+  <aside class="filters df">
+    <div class="filter__switcher df">
+      <p>Доступно сейчас</p>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="filter__filters">
+      <div class="filter__row">
+        <h2>filters</h2>
+      </div>
+      <div class="filter__row">
+        <label class="container-radio">Rating availability
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark-radio"></span>
+        </label>
+
+      </div>
+      <div class="filter__row">
+        <label class="container-radio">Rating availability
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark-radio"></span>
+        </label>
+      </div>
+    </div>
+    <div class="filter__category">
+      <div class="filter__row">
+        <h2>Category</h2>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+    </div>
+    <div class="filter__date">
+      <div class="filter__row">
+        <h2>Date</h2>
+      </div>
+      <div class="filter__row pr">
+       <input type="text" id="datepicker">
+        <span class="date__icon"></span>
+      </div>
+
+    </div>
+    <div class="filter__price">
+      <div class="filter__row">
+        <h2>Price</h2>
+      </div>
+      <div class="filter__row">
+        <div class="filter_val df j-sp-btw">
+          <span class="start">0 ($)</span>
+          <span class="end">300 ($)</span>
+        </div>
+<!--        <label for="amount">Price range:</label>-->
+
+<!--        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">-->
+        <div id="slider-price"></div>
+      </div>
+
+    </div>
+    <div class="filter__date">
+      <div class="filter__row">
+        <h2>Model’s percentage</h2>
+      </div>
+      <div class="filter__row">
+        <div class="filter_val df j-sp-btw">
+          <span class="start">0 (%)</span>
+          <span class="end">100 (%)</span>
+        </div>
+        <div id="slider-percentage"></div>
+      </div>
+
+    </div>
+    <div class="filter__category">
+      <div class="filter__row">
+        <h2>Category</h2>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    <div class="filter__category">
+      <div class="filter__row">
+        <h2>Promo type</h2>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <label class="container">Category
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="filter__row">
+        <a href="" class="see-more">See more</a>
+      </div>
+    </div>
+    <div class="filter__date">
+      <div class="filter__row">
+        <h2>Speed per day</h2>
+      </div>
+      <div class="filter__row">
+        <div class="filter_val df j-sp-btw">
+          <span class="start">0</span>
+          <span class="end">300</span>
+        </div>
+        <div id="slider-speed"></div>
+
+      </div>
+
+    </div>
+  </aside>
+  <main class="model__list">
+    <div  class="filter__tags df">
+      <div class="tag">
+        Reviews availability
+        <span class="remove"></span>
+      </div>
+      <div class="tag">
+        Pin Post + DM
+        <span class="remove"></span>
+      </div>
+      <div class="tag">
+        SFS
+        <span class="remove"></span>
+      </div>
+      <div class="tag">
+        Tips of (+20% extra)
+        <span class="remove"></span>
+      </div>
+      <div class="tag">
+        Clear all
+        <span class="remove"></span>
+      </div>
+    </div>
+    <div class="models df">
+
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-active">Доступна 30.01.23</button>
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>44 Reviews</li>
+          <li>10+ $</li>
+          <li>1 500</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-active">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon df"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-active">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-active">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-active">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-active">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-white">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-white">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+      <div class="models__item df">
+        <span class="like__icon"></span>
+        <img src="images/model.png">
+        <button class="model__btn-white">Доступна 30.01.23</button>
+
+        <div class="model__name df">
+          <p class="df"> Dua Lipa <span class="hot__icon"></span></p>
+          <span class="star__icon">4.5</span>
+        </div>
+        <div class="model__categories">
+          <ul>
+            <li>category</li>
+            <li>category</li>
+            <li>category</li>
+          </ul>
+        </div>
+        <ul class="model__tags">
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+          <li>TOP 30%</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</section>
+
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
