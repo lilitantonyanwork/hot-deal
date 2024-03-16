@@ -1311,3 +1311,19 @@ footer .menu__link, footer .menu__link--active{
     border: none;
     font-size: 14px;
 }
+.message__file{
+    width: 22px;
+    height: 22px;
+    background: url('../images/icons/file.svg');
+    border: none;
+    cursor: pointer;
+}
+
+.message__send{
+    width: 20px;
+    height: 18px;
+    background: url('../images/icons/send.svg');
+    border: none;
+    cursor: pointer;
+
+}
